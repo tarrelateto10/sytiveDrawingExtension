@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Automation Controller</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Loop Automation</h2>
+    
+    <div class="input-group">
+      <label for="prompts">Prompts (one per line):</label>
+      <textarea id="prompts" rows="10" placeholder="Enter prompts here..."></textarea>
+    </div>
+
+    <div class="controls">
+      <button id="play" class="btn primary">Play / Resume</button>
+      <button id="stop" class="btn warning">Stop</button>
+      <button id="reset" class="btn danger">Reset</button>
+    </div>
+
+    <div class="status-box">
+      <p><strong>Status:</strong> <span id="status-text">Idle</span></p>
+      <p><strong>Progress:</strong> <span id="progress-text">0 / 0</span></p>
+      <div class="current-prompt">
+        <label>Current Prompt:</label>
+        <p id="current-prompt-display">None</p>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
