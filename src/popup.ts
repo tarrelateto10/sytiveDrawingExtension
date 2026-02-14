@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (tabs[0]?.id) {
                 chrome.tabs.sendMessage(tabs[0].id, {
                     action: 'PLAY',
-                    prompts: prompts.split('\n').filter(p => p.trim() !== '')
+                    prompts: prompts.split('<end>').filter(a => a.includes('<start>')).map(item => item.replace("<start>", "").replace('"', "").trim())
                 });
             }
         });
